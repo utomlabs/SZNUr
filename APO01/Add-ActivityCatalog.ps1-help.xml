@@ -1,0 +1,314 @@
+﻿<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<helpItems schema="maml">
+  <command:command xmlns:maml="http://schemas.microsoft.com/maml/2004/10" xmlns:command="http://schemas.microsoft.com/maml/dev/command/2004/10" xmlns:dev="http://schemas.microsoft.com/maml/dev/2004/10">
+    <command:details>
+      <command:name>Add-ActivityCatalog.ps1</command:name>
+      <maml:description>
+        <maml:para>Wyekstrahowanie katalogu działań ze zdefiniowanego wcześniej regulaminu organizacyjnego.</maml:para>
+      </maml:description>
+      <maml:copyright>
+        <maml:para />
+      </maml:copyright>
+      <command:verb>Add</command:verb>
+      <command:noun>ActivityCatalog</command:noun>
+      <dev:version />
+    </command:details>
+    <maml:description>
+      <maml:para>Wyekstrahowanie katalogu działań ze wskazanego regulaminu organizacyjego. Tworzy w źródłowym pliku nowy arkusz, w którym zawarty jest ekstrakt określający Domenę, Proces, Działanie, Uszczegółowienie.</maml:para>
+    </maml:description>
+    <command:syntax>
+      <command:syntaxItem>
+        <command:name>Add-ActivityCatalog.ps1</command:name>
+        <command:parameter require="true" variableLength="false" globbing="false" pipelineInput="false" postion="0">
+          <maml:name>ROFile</maml:name>
+          <maml:description>
+            <maml:para>Plik zawierający źródłowy regulamin organizacyjny.</maml:para>
+          </maml:description>
+          <command:parameterValue required="false" variableLength="false">String</command:parameterValue>
+        </command:parameter>
+        <command:parameter require="false" variableLength="false" globbing="false" pipelineInput="false" postion="0">
+          <maml:name>OutputFile</maml:name>
+          <maml:description>
+            <maml:para>Plik teskstowy, do którego ma być zapisany wynikowy katalog działań.</maml:para>
+          </maml:description>
+          <command:parameterValue required="false" variableLength="false">String</command:parameterValue>
+        </command:parameter>
+        <command:parameter require="false" variableLength="false" globbing="false" pipelineInput="false" postion="0">
+          <maml:name>Verbose</maml:name>
+          <maml:description>
+            <maml:para>Przełącznik powodujący, że skrypt wyświetla szczegółowe informacje na temat postępów przetwarzania.</maml:para>
+          </maml:description>
+          <command:parameterValue required="false" variableLength="false">SwitchParameter</command:parameterValue>
+        </command:parameter>
+        <command:parameter require="false" variableLength="false" globbing="false" pipelineInput="false" postion="0">
+          <maml:name>Debug</maml:name>
+          <maml:description>
+            <maml:para>TBD</maml:para>
+          </maml:description>
+          <command:parameterValue required="false" variableLength="false">SwitchParameter</command:parameterValue>
+        </command:parameter>
+        <command:parameter require="false" variableLength="false" globbing="false" pipelineInput="false" postion="0">
+          <maml:name>ErrorAction</maml:name>
+          <maml:description>
+            <maml:para>TBD</maml:para>
+          </maml:description>
+          <command:parameterValue required="false" variableLength="false">ActionPreference</command:parameterValue>
+        </command:parameter>
+        <command:parameter require="false" variableLength="false" globbing="false" pipelineInput="false" postion="0">
+          <maml:name>WarningAction</maml:name>
+          <maml:description>
+            <maml:para>TBD</maml:para>
+          </maml:description>
+          <command:parameterValue required="false" variableLength="false">ActionPreference</command:parameterValue>
+        </command:parameter>
+        <command:parameter require="false" variableLength="false" globbing="false" pipelineInput="false" postion="0">
+          <maml:name>ErrorVariable</maml:name>
+          <maml:description>
+            <maml:para>IHNI</maml:para>
+          </maml:description>
+          <command:parameterValue required="false" variableLength="false">String</command:parameterValue>
+        </command:parameter>
+        <command:parameter require="false" variableLength="false" globbing="false" pipelineInput="false" postion="0">
+          <maml:name>WarningVariable</maml:name>
+          <maml:description>
+            <maml:para>IHNI</maml:para>
+          </maml:description>
+          <command:parameterValue required="false" variableLength="false">String</command:parameterValue>
+        </command:parameter>
+        <command:parameter require="false" variableLength="false" globbing="false" pipelineInput="false" postion="0">
+          <maml:name>OutVariable</maml:name>
+          <maml:description>
+            <maml:para>IHNI</maml:para>
+          </maml:description>
+          <command:parameterValue required="false" variableLength="false">String</command:parameterValue>
+        </command:parameter>
+        <command:parameter require="false" variableLength="false" globbing="false" pipelineInput="false" postion="0">
+          <maml:name>OutBuffer</maml:name>
+          <maml:description>
+            <maml:para>IHNI</maml:para>
+          </maml:description>
+          <command:parameterValue required="false" variableLength="false">Int32</command:parameterValue>
+        </command:parameter>
+        <command:parameter require="false" variableLength="false" globbing="false" pipelineInput="false" postion="0">
+          <maml:name>WhatIf</maml:name>
+          <maml:description>
+            <maml:para>Przełącznik, po użyciu którego skrypt powinien jedynie zakomunikować, jakie zmiany w systemie dokonałby, kiedy zostałby użyty.</maml:para>
+          </maml:description>
+          <command:parameterValue required="false" variableLength="false">SwitchParameter</command:parameterValue>
+        </command:parameter>
+        <command:parameter require="false" variableLength="false" globbing="false" pipelineInput="false" postion="0">
+          <maml:name>Confirm</maml:name>
+          <maml:description>
+            <maml:para>Przełącznik, po użyciu którego skrypt powinien pytać o potwierdzenie zmian, jakie zostaną wykonane w systemie.</maml:para>
+          </maml:description>
+          <command:parameterValue required="false" variableLength="false">SwitchParameter</command:parameterValue>
+        </command:parameter>
+      </command:syntaxItem>
+    </command:syntax>
+    <command:parameters>
+      <command:parameter required="true" variableLength="false" globbing="false" pipelineInput="true (ByValue)" position="0">
+        <maml:name>ROFile</maml:name>
+        <maml:description>
+          <maml:para>Plik zawierający źródłowy regulamin organizacyjny.</maml:para>
+        </maml:description>
+        <command:parameterValue required="true" variableLength="false">String</command:parameterValue>
+        <dev:type>
+          <maml:name>String</maml:name>
+          <maml:uri />
+        </dev:type>
+        <dev:defaultValue />
+      </command:parameter>
+      <command:parameter required="fale" variableLength="false" globbing="false" pipelineInput="false (ByValue)" position="0">
+        <maml:name>OutputFile</maml:name>
+        <maml:description>
+          <maml:para>Plik teskstowy, do którego ma być zapisany wynikowy katalog działań.</maml:para>
+        </maml:description>
+        <command:parameterValue required="true" variableLength="false">String</command:parameterValue>
+        <dev:type>
+          <maml:name>String</maml:name>
+          <maml:uri />
+        </dev:type>
+        <dev:defaultValue />
+      </command:parameter>
+      <command:parameter required="false" variableLength="false" globbing="false" pipelineInput="false (ByValue)" position="0">
+        <maml:name>Verbose</maml:name>
+        <maml:description>
+          <maml:para>Przełącznik powodujący, że skrypt wyświetla szczegółowe informacje na temat postępów przetwarzania.</maml:para>
+        </maml:description>
+        <command:parameterValue required="true" variableLength="false">SwitchParameter</command:parameterValue>
+        <dev:type>
+          <maml:name>SwitchParameter</maml:name>
+          <maml:uri />
+        </dev:type>
+        <dev:defaultValue />
+      </command:parameter>
+      <command:parameter required="false" variableLength="false" globbing="false" pipelineInput="false (ByValue)" position="0">
+        <maml:name>Debug</maml:name>
+        <maml:description>
+          <maml:para>TBD</maml:para>
+        </maml:description>
+        <command:parameterValue required="true" variableLength="false">SwitchParameter</command:parameterValue>
+        <dev:type>
+          <maml:name>SwitchParameter</maml:name>
+          <maml:uri />
+        </dev:type>
+        <dev:defaultValue />
+      </command:parameter>
+      <command:parameter required="false" variableLength="false" globbing="false" pipelineInput="false (ByValue)" position="0">
+        <maml:name>ErrorAction</maml:name>
+        <maml:description>
+          <maml:para>IHNI</maml:para>
+        </maml:description>
+        <command:parameterValue required="true" variableLength="false">ActionPreference</command:parameterValue>
+        <dev:type>
+          <maml:name>ActionPreference</maml:name>
+          <maml:uri />
+        </dev:type>
+        <dev:defaultValue />
+      </command:parameter>
+      <command:parameter required="false" variableLength="false" globbing="false" pipelineInput="false (ByValue)" position="0">
+        <maml:name>WarningAction</maml:name>
+        <maml:description>
+          <maml:para>IHNI</maml:para>
+        </maml:description>
+        <command:parameterValue required="true" variableLength="false">ActionPreference</command:parameterValue>
+        <dev:type>
+          <maml:name>ActionPreference</maml:name>
+          <maml:uri />
+        </dev:type>
+        <dev:defaultValue />
+      </command:parameter>
+      <command:parameter required="false" variableLength="false" globbing="false" pipelineInput="false (ByValue)" position="0">
+        <maml:name>ErrorVariable</maml:name>
+        <maml:description>
+          <maml:para>IHNI</maml:para>
+        </maml:description>
+        <command:parameterValue required="true" variableLength="false">String</command:parameterValue>
+        <dev:type>
+          <maml:name>String</maml:name>
+          <maml:uri />
+        </dev:type>
+        <dev:defaultValue />
+      </command:parameter>
+      <command:parameter required="false" variableLength="false" globbing="false" pipelineInput="false (ByValue)" position="0">
+        <maml:name>WarningVariable</maml:name>
+        <maml:description>
+          <maml:para>IHNI</maml:para>
+        </maml:description>
+        <command:parameterValue required="true" variableLength="false">String</command:parameterValue>
+        <dev:type>
+          <maml:name>String</maml:name>
+          <maml:uri />
+        </dev:type>
+        <dev:defaultValue />
+      </command:parameter>
+      <command:parameter required="false" variableLength="false" globbing="false" pipelineInput="false (ByValue)" position="0">
+        <maml:name>OutVariable</maml:name>
+        <maml:description>
+          <maml:para>IHNI</maml:para>
+        </maml:description>
+        <command:parameterValue required="true" variableLength="false">String</command:parameterValue>
+        <dev:type>
+          <maml:name>String</maml:name>
+          <maml:uri />
+        </dev:type>
+        <dev:defaultValue />
+      </command:parameter>
+      <command:parameter required="false" variableLength="false" globbing="false" pipelineInput="false (ByValue)" position="0">
+        <maml:name>OutBuffer</maml:name>
+        <maml:description>
+          <maml:para>IHNI</maml:para>
+        </maml:description>
+        <command:parameterValue required="true" variableLength="false">Int32</command:parameterValue>
+        <dev:type>
+          <maml:name>Int32</maml:name>
+          <maml:uri />
+        </dev:type>
+        <dev:defaultValue />
+      </command:parameter>
+      <command:parameter required="false" variableLength="false" globbing="false" pipelineInput="false (ByValue)" position="0">
+        <maml:name>WhatIf</maml:name>
+        <maml:description>
+          <maml:para>Przełącznik, po użyciu którego skrypt powinien jedynie zakomunikować, jakie zmiany w systemie dokonałby, kiedy zostałby użyty.</maml:para>
+        </maml:description>
+        <command:parameterValue required="true" variableLength="false">SwitchParameter</command:parameterValue>
+        <dev:type>
+          <maml:name>SwitchParameter</maml:name>
+          <maml:uri />
+        </dev:type>
+        <dev:defaultValue />
+      </command:parameter>
+      <command:parameter required="false" variableLength="false" globbing="false" pipelineInput="false (ByValue)" position="0">
+        <maml:name>Confirm</maml:name>
+        <maml:description>
+          <maml:para>Przełącznik, po użyciu którego skrypt powinien pytać o potwierdzenie zmian, jakie zostaną wykonane w systemie.</maml:para>
+        </maml:description>
+        <command:parameterValue required="true" variableLength="false">SwitchParameter</command:parameterValue>
+        <dev:type>
+          <maml:name>SwitchParameter</maml:name>
+          <maml:uri />
+        </dev:type>
+        <dev:defaultValue />
+      </command:parameter>
+    </command:parameters>
+    <command:inputTypes>
+      <command:inputType>
+        <dev:type>
+          <maml:name>Plik M$ Excel zawierający źródłowy Regulamin Organizacyjny.</maml:name>
+          <maml:uri />
+          <maml:description>
+            <maml:para />
+          </maml:description>
+        </dev:type>
+        <maml:description />
+      </command:inputType>
+    </command:inputTypes>
+    <command:returnValues>
+      <command:returnValue>
+        <dev:type>
+          <maml:name>Plik zawierający katalog działań.</maml:name>
+          <maml:uri />
+          <maml:description>
+            <maml:para />
+          </maml:description>
+        </dev:type>
+        <maml:description />
+      </command:returnValue>
+    </command:returnValues>
+    <command:terminatingErrors />
+    <command:nonTerminatingErrors />
+    <maml:alertSet>
+      <maml:title />
+      <maml:alert>
+        <maml:para />
+      </maml:alert>
+    </maml:alertSet>
+    <command:examples>
+      <command:example>
+        <maml:title>--------------  EXAMPLE 1 --------------</maml:title>
+        <maml:introduction>
+          <maml:para>C:\PS&amp;gt;</maml:para>
+        </maml:introduction>
+        <dev:code>.\Add-ActivityCatalog.ps1 -ROFile "RO.xlsx" -OutputFile "ActivitiesCatalog.txt"</dev:code>
+        <dev:remarks>
+          <maml:para>-ROFile "RO.xlsx" wskazuje na plik zawierający regulamin organizacyjny.</maml:para>
+          <maml:para>-OutputFile "" wskazuje na plik, do którego będzie zapisany wynikowy katalog działań.</maml:para>
+          <maml:para />
+          <maml:para />
+          <maml:para />
+        </dev:remarks>
+        <command:commandLines>
+          <command:commandLine>
+            <command:commandText />
+          </command:commandLine>
+        </command:commandLines>
+      </command:example>
+    </command:examples>
+    <maml:relatedLinks>
+      <maml:navigationLink>
+        <maml:linkText>None</maml:linkText>
+        <maml:uri />
+      </maml:navigationLink>
+    </maml:relatedLinks>
+  </command:command>
+</helpItems>
