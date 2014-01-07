@@ -1,8 +1,10 @@
 ﻿ConvertFrom-StringData @'
 	StartMsg = Import comiesięcznego raportu czasu pracy do pliku skonsolidowanego.;Start
 	StopMsg = Import comiesięcznego raportu czasu pracy do pliku skonsolidowanego.;Stop
-  TrimHdrStartMsg = Procedura usuwająca nagłówek.;Start
-  TrimHdrStopMsg = Procedura usuwająca nagłówek.;Stop
+  TrimDescStartMsg = Procedura usuwająca metrykę z opisem raportu.;Start
+  TrimDescStopMsg = Procedura usuwająca metrykę z opisem raportu.;Stop
+  FindHdrProcAct = Wyszukiwanie wiersza zgodnego ze specyfikacją nagłówka
+  FindHdrProcStatus = Wyszukiwanie...
   RowDelMsg = Usunięty wiersz: 
   TrimEmpRowsStartMsg = Procedura usuwająca puste wiersze.;Start
   TrimEmpRowsStopMsg = Procedura usuwająca puste wiersze.;Stop
@@ -13,10 +15,15 @@
   ColDelMsg = Usunięta kolumna: 
   FormPivotStartMsg = Procedura przygotowująca arkusz jako źródło dla tabeli przestawnej.;Start
   FormPivotStopMsg = Procedura przygotowująca arkusz jako źródło dla tabeli przestawnej.;Stop
+  PivotblListExistMsg = Arkusz zawiera już listę gotową, jako źródło dla tabeli przestawnej
   FormPivotFindValProcAct = Wyszukiwanie wartości znaczących
   FormPivotFindValProcStatus = Przetwarzanie...
+  ImportRepStartMsg = Procedura importująca raport miesięczny do raportu skonsolidowanego.;Start
+  ImportRepStopMsg = Procedura importująca raport miesięczny do raportu skonsolidowanego.;Start
+  ImportRepProcAct = Importowanie danych z raportu miesięcznego do raportu skonsolidowanego
+  ImportRepProcStatus = Przetwarzanie...
 	DefaultNegMsg = Wrrr
 	Log4NetPathMsg = Sprawdź poprawność ścieżki dostępu do biblioteki DLL log4net.dll
   NoMonthRepMsg = Nie znaleziono pliku źródłowego z raportem miesięcznym
-  NoHdrFndMsg = Brak w pliku źródłowym wiersza nagłówka zgodnego ze specyfikacją kolumn
+  NoHdrFoundMsg = Brak w pliku źródłowym wiersza nagłówka zgodnego ze specyfikacją kolumn
 '@
